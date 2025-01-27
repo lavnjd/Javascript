@@ -25,8 +25,8 @@ const updateTasksList = () =>{
               <p>${task.text}</p>
             </div>
             <div class="icons">
-               <img onClick="editTask(${index})"></img>
-               <button onClick="deleteTask(${index})" id="delete">X</button>
+               <img src="./img/pen.png"onClick="editTask(${index})" id="delete"></img>
+               <img src="./img/trash.png" onClick="deleteTask(${index})" id="delete"></img>
         </div>`;
         taskItem.addEventListener('change',()=> toggleTaskComplete(index))
         taskList.append(taskItem);
@@ -36,9 +36,10 @@ const updateTasksList = () =>{
 
 const updateStatus = () => {    
     const completedTasks = tasks.filter(task => task.completed).length;
-    const a = (completedTasks/tasks)*100;
     document.getElementById('numbers').innerHTML = completedTasks+"/"+tasks.length;
-    document.getElementById('progress').style.width=`${a}%`;
+    if(tasks.length !=0 && completedTasks == tasks.length){
+        toggleConfetti();
+    }
 }
 
 const editTask = (index) =>{
@@ -56,4 +57,34 @@ const deleteTask = (index) =>{
 document.getElementById('newTask').addEventListener('click',(e)=>{
     e.preventDefault();
     addTask();
-})
+});
+
+const toggleConfetti = () =>{
+    const end = Date.now() + 5 * 100;
+
+// go Buckeyes!
+const colors = ["#FFBD00", "#ffffff"];
+
+(function frame() {
+  confetti({
+    particleCount: 5,
+    angle: 60,
+    spread: 55,
+    origin: { x: 0 },
+    colors: colors,
+  });
+
+  confetti({
+    particleCount: 5,
+    angle: 120,
+    spread: 55,
+    origin: { x: 1 },
+    colors: colors,
+  });
+
+  if (Date.now() < end) {
+    requestAnimationFrame(frame);
+  }
+})();
+}
+

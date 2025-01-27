@@ -51,21 +51,7 @@ body{
     margin-left:10px;
 }
 
-#progressBar{
-    width: 100%;
-    height: 10px;
-    background-color: var(--secondaryBackground);
-    border-radius: 5px;
-    margin-top:20px;
-}
 
-#progress{
-    width:80%;
-    height:10px;
-    background-color: var(--teal);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
 
 form{
     margin-top:60px;
@@ -81,6 +67,10 @@ input{
     border-radius: 10px;
     outline: none;
     color: var(--text);
+}
+
+.checked{
+    color: red;
 }
 
 #delete{

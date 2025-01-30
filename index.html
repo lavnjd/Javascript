@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Expense tracker</title>
+    <link rel="stylesheet" href="Expense.css">
+
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+
+    <main>
+        <header>
+           <div>
+            <h5>Total Expense</h5>
+            <span id="ExpenseSum">₹0</span>
+           </div>
+        </header>
+
+        <section>
+           <h3>Expenses</h3> 
+           <ul id="transactionList">
+              <div id="Noexpense">NO EXPENSE</div>
+           </ul>
+        </section>
+
+        <section>
+            <h3>Add Expense</h3>
+            <form id="transactionForm">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="expenseReason" required/>
+                </div>
+                <div>
+                    <label for="amount">Amount</label>
+                    <input type="number" id="expenseMoney" name="amount" min="1" value="0" step="1"  required/>
+                </div>
+                <div>
+                    <label for="date">Date</label>
+                    <input type="date" id="expenseDate" name="date" required/>
+                </div>
+                <button type="submit" id="add">Submit</button>
+            </form>
+            
+        </section>
+    </main>
+    </div>
+    <script src="Expense.js"></script>
+</body>

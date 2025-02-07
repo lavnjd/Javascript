@@ -1,0 +1,44 @@
+body{
+    display: grid;
+    place-items: center;
+}
+
+#question{
+    font-size: x-large;
+    font-weight: 600;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 5px;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+.line1{
+    padding-top: 10px;
+}
+
+.line2{
+    padding-top: 10px;
+}
+
+.line3{
+    padding-top: 10px;
+}
+
+.line4{
+    padding-top:10px;
+}

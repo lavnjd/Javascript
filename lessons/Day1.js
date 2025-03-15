@@ -129,4 +129,4 @@ console.log(`Hi this is ${name} having rank ${repoCount}`);
 const gameName = new String("pokemon"); // array of characters but is String onlye
 // this has built in methods 
 //gameName.length
-
+gameName.search();//first found index
